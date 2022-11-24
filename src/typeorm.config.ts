@@ -3,6 +3,7 @@ import * as config from 'config';
 
 const dbConfig = config.get('db');
 
+
 const typeOrmConfig: TypeOrmModuleOptions = {
   type: process.env.DB_TYPE || dbConfig.type,
   host: process.env.POSTGRES_HOST || dbConfig.host,
@@ -19,6 +20,7 @@ const typeOrmConfig: TypeOrmModuleOptions = {
     __dirname + '/migration/**/*.js',
   ],
   synchronize: false,
+  // @ts-ignore
   cli: {
     migrationsDir: 'src/migration',
   },
