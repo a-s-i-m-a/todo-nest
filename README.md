@@ -26,7 +26,6 @@ $ docker-compose run nestjs npm run typeorm:generate AnyNameYouLike
 $ docker-compose run nestjs npm run typeorm:run
 ```
 
-# Running the app without docker
 ## Installation
 
 ```bash
